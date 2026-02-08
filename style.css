@@ -1,67 +1,10 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b1220;
-  color: white;
-  text-align: center;
-}
+function selectTier(name, invest, daily) {
+  document.getElementById("tierName").innerText = name;
+  document.getElementById("investment").innerText = invest;
+  document.getElementById("daily").innerText = daily;
+  document.getElementById("monthly").innerText = daily * 30;
 
-.navbar {
-  padding: 20px;
-  background: #020617;
-  font-size: 24px;
-  font-weight: bold;
-  color: #22d3ee;
-}
-
-.hero {
-  padding: 60px 20px;
-}
-
-.tiers {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px;
-}
-
-.tier {
-  background: #020617;
-  padding: 25px;
-  width: 200px;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.tier:hover {
-  transform: scale(1.05);
-  background: #020617;
-  border: 1px solid #22d3ee;
-}
-
-.dashboard {
-  background: #020617;
-  padding: 50px 20px;
-}
-
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.stat {
-  background: #0b1220;
-  padding: 25px;
-  border-radius: 12px;
-  width: 200px;
-}
-
-footer {
-  padding: 20px;
-  font-size: 14px;
-  color: #94a3b8;
+  document.getElementById("dashboard").scrollIntoView({
+    behavior: "smooth"
+  });
 }
