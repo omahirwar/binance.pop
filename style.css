@@ -1,141 +1,144 @@
 :root {
-  --bg-dark: #0b0f1a;
-  --bg-light: #f4f6fb;
-  --card-dark: rgba(255,255,255,0.05);
-  --card-light: #ffffff;
-  --text-dark: #ffffff;
-  --text-light: #111827;
-  --accent: #38bdf8;
+  --bg-dark:#0b0f1a;
+  --bg-light:#f4f6fb;
+  --card-dark:rgba(255,255,255,0.08);
+  --card-light:#ffffff;
+  --text-dark:#ffffff;
+  --text-light:#111827;
+  --accent:#38bdf8;
 }
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  transition: 0.4s;
+  margin:0;
+  font-family:Segoe UI, sans-serif;
+  transition:.4s;
 }
 
-body.dark {
-  background: var(--bg-dark);
-  color: var(--text-dark);
-}
-
-body.light {
-  background: var(--bg-light);
-  color: var(--text-light);
-}
+body.dark { background:var(--bg-dark); color:var(--text-dark); }
+body.light { background:var(--bg-light); color:var(--text-light); }
 
 /* NAV */
 .nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 50px;
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(12px);
-}
-
-.logo {
-  font-size: 26px;
-  font-weight: bold;
-  color: var(--accent);
-}
-
-.toggle {
-  background: none;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 50px;
+  position:sticky;
+  top:0;
+  backdrop-filter:blur(12px);
 }
 
 /* HERO */
 .hero {
-  padding: 100px 20px 60px;
-  text-align: center;
+  padding:120px 20px;
+  text-align:center;
+  background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1640161704729-cbe966a08476");
+  background-size:cover;
+  background-position:center;
 }
 
-.hero h1 {
-  font-size: 52px;
+.hero h1 { font-size:52px; }
+
+/* WALLET */
+.wallet {
+  padding:80px 20px;
+  text-align:center;
+}
+
+.wallet-card {
+  max-width:420px;
+  margin:auto;
+  padding:30px;
+  border-radius:18px;
+  background:var(--card-dark);
+  backdrop-filter:blur(16px);
+}
+
+body.light .wallet-card { background:var(--card-light); }
+
+.label {
+  opacity:.7;
+  font-size:14px;
+}
+
+.address {
+  display:flex;
+  justify-content:space-between;
+  margin:10px 0 20px;
+}
+
+.address button {
+  background:var(--accent);
+  border:none;
+  padding:6px 12px;
+  border-radius:6px;
+  cursor:pointer;
 }
 
 /* TIERS */
-.tiers {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 25px;
-  padding: 60px;
+.tiers { padding:80px 40px; text-align:center; }
+
+.tier-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:40px;
 }
 
 .tier {
-  padding: 30px;
-  border-radius: 18px;
-  background: var(--card-dark);
-  backdrop-filter: blur(16px);
-  text-align: center;
-  transition: 0.3s;
+  padding:30px;
+  border-radius:18px;
+  background:var(--card-dark);
+  transition:.3s;
 }
 
-body.light .tier {
-  background: var(--card-light);
-}
+body.light .tier { background:var(--card-light); }
 
 .tier:hover {
-  transform: translateY(-10px) scale(1.03);
+  transform:translateY(-8px) scale(1.03);
 }
 
 .tier span {
-  color: var(--accent);
-  font-weight: bold;
-}
-
-/* DETAILS */
-.details {
-  padding: 80px;
-  text-align: center;
+  color:var(--accent);
+  font-weight:bold;
 }
 
 /* DEPOSIT */
 .deposit {
-  padding: 80px;
-  text-align: center;
+  padding:80px 20px;
+  text-align:center;
 }
 
 .deposit-box {
-  max-width: 420px;
-  margin: auto;
-  padding: 30px;
-  border-radius: 18px;
-  background: var(--card-dark);
+  max-width:400px;
+  margin:auto;
+  padding:30px;
+  border-radius:18px;
+  background:var(--card-dark);
 }
 
-body.light .deposit-box {
-  background: var(--card-light);
-}
-
-.address {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0 20px;
-}
-
-.address button,
-.confirm {
-  background: var(--accent);
-  border: none;
-  padding: 10px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-}
+body.light .deposit-box { background:var(--card-light); }
 
 input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  margin-bottom: 20px;
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  margin:15px 0;
+}
+
+.confirm {
+  width:100%;
+  padding:14px;
+  background:var(--accent);
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
 }
 
 footer {
-  padding: 30px;
-  text-align: center;
-  opacity: 0.6;
+  padding:30px;
+  text-align:center;
+  opacity:.6;
 }
