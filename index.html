@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PRAP – Professional Platform</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>POP – Tier Investment Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">PRAP</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<nav class="navbar">
+  <div class="logo">POP</div>
+</nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1>Build Your Digital Presence</h1>
-    <p>Professional • Fast • Secure</p>
-    <button onclick="scrollToContact()">Get Started</button>
-  </section>
+<section class="hero">
+  <h1>Choose Your Tier</h1>
+  <p>Invest Once • Earn Daily</p>
+</section>
 
-  <!-- Features -->
-  <section id="features" class="features">
-    <h2>Why Choose Us</h2>
+<section class="tiers">
+  <div class="tier" onclick="selectTier('Bronze',100,1.5)">
+    <h2>Bronze</h2>
+    <p>Min: $100</p>
+    <p>Daily: $1.5</p>
+  </div>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Modern Design</h3>
-        <p>Clean and professional UI for all devices.</p>
-      </div>
+  <div class="tier" onclick="selectTier('Silver',120,1.8)">
+    <h2>Silver</h2>
+    <p>Min: $120</p>
+    <p>Daily: $1.8</p>
+  </div>
 
-      <div class="card">
-        <h3>Fast Performance</h3>
-        <p>Optimized for speed and SEO.</p>
-      </div>
+  <div class="tier" onclick="selectTier('Gold',170,2.9)">
+    <h2>Gold</h2>
+    <p>Min: $170</p>
+    <p>Daily: $2.9</p>
+  </div>
 
-      <div class="card">
-        <h3>Secure Platform</h3>
-        <p>Industry-standard security practices.</p>
-      </div>
+  <div class="tier" onclick="selectTier('Platinum',200,5)">
+    <h2>Platinum</h2>
+    <p>Min: $200</p>
+    <p>Daily: $5</p>
+  </div>
+
+  <div class="tier" onclick="selectTier('Diamond',250,10)">
+    <h2>Diamond</h2>
+    <p>Min: $250+</p>
+    <p>Daily: $10</p>
+  </div>
+</section>
+
+<section class="dashboard" id="dashboard">
+  <h2>Your Earnings</h2>
+  <p><strong>Selected Tier:</strong> <span id="tierName">–</span></p>
+  <p><strong>Investment:</strong> $<span id="investment">0</span></p>
+
+  <div class="stats">
+    <div class="stat">
+      <h3>$<span id="daily">0</span></h3>
+      <p>Daily</p>
     </div>
-  </section>
+    <div class="stat">
+      <h3>$<span id="monthly">0</span></h3>
+      <p>Monthly (30 days)</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
+<footer>
+  <p>⚠️ Demo Platform – Earnings shown are simulated</p>
+</footer>
 
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 PRAP. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
