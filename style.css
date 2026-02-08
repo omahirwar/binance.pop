@@ -1,10 +1,170 @@
-function selectTier(name, invest, daily) {
-  document.getElementById("tierName").innerText = name;
-  document.getElementById("investment").innerText = invest;
-  document.getElementById("daily").innerText = daily;
-  document.getElementById("monthly").innerText = daily * 30;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
 
-  document.getElementById("dashboard").scrollIntoView({
-    behavior: "smooth"
-  });
+body {
+  background: #0b1220;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #020617;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 60px;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.nav-links a {
+  margin-left: 30px;
+  color: #cbd5f5;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  padding: 140px 20px 100px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 20px auto;
+  color: #94a3b8;
+}
+
+/* TIERS */
+.tiers {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.tier-card {
+  background: #020617;
+  padding: 30px;
+  border-radius: 14px;
+}
+
+.tier-card h3 {
+  color: #38bdf8;
+}
+
+.highlight {
+  border: 1px solid #38bdf8;
+}
+
+/* DETAILS */
+.details {
+  padding: 80px 40px;
+  background: #020617;
+}
+
+.details ul {
+  margin: 30px 0;
+  padding-left: 20px;
+}
+
+.details li {
+  margin-bottom: 10px;
+}
+
+.example {
+  background: #0b1220;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* DEPOSIT */
+.deposit {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.deposit-box {
+  max-width: 420px;
+  margin: 40px auto;
+  background: #020617;
+  padding: 30px;
+  border-radius: 14px;
+}
+
+.deposit-box label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.address {
+  display: flex;
+  justify-content: space-between;
+  background: #0b1220;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.address button {
+  background: #38bdf8;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.deposit-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
+}
+
+.deposit-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+  padding: 25px;
+  background: #020617;
+  text-align: center;
+  color: #94a3b8;
 }
