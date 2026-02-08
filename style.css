@@ -1,139 +1,67 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
 body {
-  background: #0f172a;
-  color: #ffffff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1220;
+  color: white;
+  text-align: center;
 }
 
-/* Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px;
+  padding: 20px;
   background: #020617;
-  position: fixed;
-  width: 100%;
-  top: 0;
-}
-
-.logo {
   font-size: 24px;
   font-weight: bold;
-  color: #38bdf8;
+  color: #22d3ee;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  color: #e5e7eb;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  color: #38bdf8;
-}
-
-/* Hero */
 .hero {
-  height: 100vh;
+  padding: 60px 20px;
+}
+
+.tiers {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  gap: 20px;
+  padding: 40px;
 }
 
-.hero h1 {
-  font-size: 52px;
-}
-
-.hero p {
-  margin: 20px 0;
-  font-size: 20px;
-  color: #94a3b8;
-}
-
-.hero button {
-  padding: 14px 30px;
-  font-size: 16px;
-  background: #38bdf8;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.hero button:hover {
-  background: #0ea5e9;
-}
-
-/* Features */
-.features {
-  padding: 100px 60px;
-  text-align: center;
-}
-
-.cards {
-  display: flex;
-  gap: 30px;
-  margin-top: 40px;
-  justify-content: center;
-}
-
-.card {
+.tier {
   background: #020617;
-  padding: 30px;
+  padding: 25px;
+  width: 200px;
   border-radius: 12px;
-  width: 280px;
-}
-
-.card h3 {
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
-
-/* Contact */
-.contact {
-  padding: 100px 60px;
-  background: #020617;
-  text-align: center;
-}
-
-.contact form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact input,
-.contact textarea {
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-}
-
-.contact button {
-  background: #38bdf8;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
   cursor: pointer;
+  transition: transform 0.2s;
 }
 
-/* Footer */
+.tier:hover {
+  transform: scale(1.05);
+  background: #020617;
+  border: 1px solid #22d3ee;
+}
+
+.dashboard {
+  background: #020617;
+  padding: 50px 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stat {
+  background: #0b1220;
+  padding: 25px;
+  border-radius: 12px;
+  width: 200px;
+}
+
 footer {
   padding: 20px;
-  text-align: center;
-  background: #020617;
+  font-size: 14px;
   color: #94a3b8;
 }
