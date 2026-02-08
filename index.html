@@ -2,127 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>POP – Contribution Tiers</title>
+  <title>POP – Contribution Platform</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<!-- NAV -->
+<body class="dark">
+
 <nav class="nav">
   <div class="logo">POP</div>
-  <div class="nav-links">
-    <a href="#tiers">Tiers</a>
-    <a href="#details">Details</a>
-    <a href="#deposit">Deposit</a>
+
+  <div class="nav-right">
+    <button class="toggle" onclick="toggleTheme()">🌗</button>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Structured Contribution System</h1>
-  <p>
-    Choose a tier • Participate with contribution •  
-    View daily return projections transparently
-  </p>
-</section>
+<header class="hero">
+  <h1>Smart Contribution Tiers</h1>
+  <p>Transparent structure • Daily projections • Tier-based participation</p>
+</header>
 
-<!-- TIERS -->
-<section id="tiers" class="tiers">
-  <h2>Contribution Tiers</h2>
+<section class="tiers">
+  <div class="tier bronze">
+    <h3>Bronze</h3>
+    <p>$100</p>
+    <span>$1.5 / day</span>
+  </div>
 
-  <div class="tier-grid">
-    <div class="tier-card">
-      <h3>Bronze</h3>
-      <p>Minimum: $100</p>
-      <p>Daily Projection: $1.5</p>
-    </div>
+  <div class="tier silver">
+    <h3>Silver</h3>
+    <p>$120</p>
+    <span>$1.8 / day</span>
+  </div>
 
-    <div class="tier-card">
-      <h3>Silver</h3>
-      <p>Minimum: $120</p>
-      <p>Daily Projection: $1.8</p>
-    </div>
+  <div class="tier gold">
+    <h3>Gold</h3>
+    <p>$170</p>
+    <span>$2.9 / day</span>
+  </div>
 
-    <div class="tier-card">
-      <h3>Gold</h3>
-      <p>Minimum: $170</p>
-      <p>Daily Projection: $2.9</p>
-    </div>
+  <div class="tier platinum">
+    <h3>Platinum</h3>
+    <p>$200</p>
+    <span>$5 / day</span>
+  </div>
 
-    <div class="tier-card">
-      <h3>Platinum</h3>
-      <p>Minimum: $200</p>
-      <p>Daily Projection: $5</p>
-    </div>
-
-    <div class="tier-card highlight">
-      <h3>Diamond</h3>
-      <p>Minimum: $250 – $300</p>
-      <p>Daily Projection: $10</p>
-    </div>
+  <div class="tier diamond">
+    <h3>Diamond</h3>
+    <p>$250–300</p>
+    <span>$10 / day</span>
   </div>
 </section>
 
-<!-- DETAILS -->
-<section id="details" class="details">
-  <h2>How the Contribution Works</h2>
-
+<section class="details">
+  <h2>How It Works</h2>
   <p>
-    POP uses a tier-based contribution model.  
-    Each tier has a defined minimum contribution amount and a fixed
-    daily projection shown for transparency.
+    Each tier represents a structured contribution level.  
+    Based on the selected tier, the system displays a fixed
+    daily projection for transparency.
   </p>
-
-  <ul>
-    <li>Contribution is made once per tier</li>
-    <li>Daily projections are calculated automatically</li>
-    <li>Higher tiers offer higher daily projections</li>
-    <li>All figures shown are for understanding participation structure</li>
-  </ul>
-
-  <div class="example">
-    <h4>Example</h4>
-    <p>
-      If you participate in the <strong>Gold</strong> tier with $170,
-      the system shows a projected daily return of <strong>$2.9</strong>,
-      which equals <strong>$87</strong> over 30 days.
-    </p>
-  </div>
 </section>
 
-<!-- DEPOSIT -->
-<section id="deposit" class="deposit">
+<section class="deposit">
   <h2>Contribution Deposit</h2>
-
-  <p>
-    Use the address below to make your contribution.
-    Make sure to enter the exact amount based on your selected tier.
-  </p>
 
   <div class="deposit-box">
     <label>Contribution Address</label>
     <div class="address">
-      <span id="address">0xDEMO1234ADDRESS5678</span>
-      <button onclick="copyAddress()">Copy</button>
+      <span id="addr">0xDEMO1234ADDRESS5678</span>
+      <button onclick="copy()">Copy</button>
     </div>
 
-    <label>Enter Amount (USD)</label>
-    <input type="number" placeholder="e.g. 100" />
+    <label>Amount (USD)</label>
+    <input type="number" placeholder="Enter amount">
 
-    <button class="deposit-btn">
-      I Have Made the Contribution
-    </button>
+    <button class="confirm">I Have Contributed</button>
   </div>
-
-  <p class="note">
-    This platform is designed to present the contribution structure clearly.
-    No automatic transaction processing is performed on this website.
-  </p>
 </section>
 
 <footer>
-  <p>© 2026 POP Platform • Structured Contribution Overview</p>
+  <p>© POP Platform</p>
 </footer>
 
 <script src="script.js"></script>
