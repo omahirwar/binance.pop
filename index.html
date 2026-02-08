@@ -11,77 +11,61 @@
 
 <nav class="nav">
   <div class="logo">POP</div>
-
-  <div class="nav-right">
-    <button class="toggle" onclick="toggleTheme()">🌗</button>
-  </div>
+  <button class="toggle" onclick="toggleTheme()">🌗</button>
 </nav>
 
+<!-- HERO -->
 <header class="hero">
-  <h1>Smart Contribution Tiers</h1>
-  <p>Transparent structure • Daily projections • Tier-based participation</p>
+  <div class="hero-content">
+    <h1>POP Contribution Platform</h1>
+    <p>Wallet-based participation • Transparent projections</p>
+  </div>
 </header>
 
-<section class="tiers">
-  <div class="tier bronze">
-    <h3>Bronze</h3>
-    <p>$100</p>
-    <span>$1.5 / day</span>
-  </div>
+<!-- WALLET -->
+<section class="wallet">
+  <h2>Your Wallet</h2>
 
-  <div class="tier silver">
-    <h3>Silver</h3>
-    <p>$120</p>
-    <span>$1.8 / day</span>
-  </div>
-
-  <div class="tier gold">
-    <h3>Gold</h3>
-    <p>$170</p>
-    <span>$2.9 / day</span>
-  </div>
-
-  <div class="tier platinum">
-    <h3>Platinum</h3>
-    <p>$200</p>
-    <span>$5 / day</span>
-  </div>
-
-  <div class="tier diamond">
-    <h3>Diamond</h3>
-    <p>$250–300</p>
-    <span>$10 / day</span>
-  </div>
-</section>
-
-<section class="details">
-  <h2>How It Works</h2>
-  <p>
-    Each tier represents a structured contribution level.  
-    Based on the selected tier, the system displays a fixed
-    daily projection for transparency.
-  </p>
-</section>
-
-<section class="deposit">
-  <h2>Contribution Deposit</h2>
-
-  <div class="deposit-box">
-    <label>Contribution Address</label>
+  <div class="wallet-card">
+    <p class="label">Wallet Address</p>
     <div class="address">
-      <span id="addr">0xDEMO1234ADDRESS5678</span>
-      <button onclick="copy()">Copy</button>
+      <span id="walletAddr">0xDEMO1234ADDRESS5678</span>
+      <button onclick="copyAddr()">Copy</button>
     </div>
 
-    <label>Amount (USD)</label>
-    <input type="number" placeholder="Enter amount">
+    <p class="label">Current Balance</p>
+    <h3>$<span id="balance">0.00</span></h3>
+  </div>
+</section>
 
-    <button class="confirm">I Have Contributed</button>
+<!-- TIERS -->
+<section class="tiers">
+  <h2>Contribution Tiers</h2>
+
+  <div class="tier-grid">
+    <div class="tier"><h3>Bronze</h3><p>$100</p><span>$1.5 / day</span></div>
+    <div class="tier"><h3>Silver</h3><p>$120</p><span>$1.8 / day</span></div>
+    <div class="tier"><h3>Gold</h3><p>$170</p><span>$2.9 / day</span></div>
+    <div class="tier"><h3>Platinum</h3><p>$200</p><span>$5 / day</span></div>
+    <div class="tier highlight"><h3>Diamond</h3><p>$250–300</p><span>$10 / day</span></div>
+  </div>
+</section>
+
+<!-- DEPOSIT -->
+<section class="deposit">
+  <h2>Deposit to Wallet</h2>
+
+  <div class="deposit-box">
+    <label>Enter Amount (USD)</label>
+    <input type="number" id="amount" placeholder="e.g. 100">
+
+    <button class="confirm" onclick="deposit()">Confirm Deposit</button>
+    <p class="note">Balance will update instantly after confirmation</p>
   </div>
 </section>
 
 <footer>
-  <p>© POP Platform</p>
+  <p>© 2026 POP Platform</p>
 </footer>
 
 <script src="script.js"></script>
