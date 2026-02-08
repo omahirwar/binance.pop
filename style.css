@@ -1,5 +1,141 @@
-function copyAddress() {
-  const addr = document.getElementById("address").innerText;
-  navigator.clipboard.writeText(addr);
-  alert("Address copied");
+:root {
+  --bg-dark: #0b0f1a;
+  --bg-light: #f4f6fb;
+  --card-dark: rgba(255,255,255,0.05);
+  --card-light: #ffffff;
+  --text-dark: #ffffff;
+  --text-light: #111827;
+  --accent: #38bdf8;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: 0.4s;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.toggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  padding: 100px 20px 60px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 52px;
+}
+
+/* TIERS */
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 25px;
+  padding: 60px;
+}
+
+.tier {
+  padding: 30px;
+  border-radius: 18px;
+  background: var(--card-dark);
+  backdrop-filter: blur(16px);
+  text-align: center;
+  transition: 0.3s;
+}
+
+body.light .tier {
+  background: var(--card-light);
+}
+
+.tier:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.tier span {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* DETAILS */
+.details {
+  padding: 80px;
+  text-align: center;
+}
+
+/* DEPOSIT */
+.deposit {
+  padding: 80px;
+  text-align: center;
+}
+
+.deposit-box {
+  max-width: 420px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 18px;
+  background: var(--card-dark);
+}
+
+body.light .deposit-box {
+  background: var(--card-light);
+}
+
+.address {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px;
+}
+
+.address button,
+.confirm {
+  background: var(--accent);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  opacity: 0.6;
 }
